@@ -1,0 +1,55 @@
+
+
+.convenience-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  width: 100vw;
+  margin: 20px auto;
+  font-family: 'Arial', sans-serif;
+  background-color: #D9D9D9;
+  max-height: fit-content;
+}
+
+.stripes {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+
+.stripe {
+  height: 20px;
+  width: 100%;
+  margin: 3px 0;
+}
+
+.one {
+  background-color: #527246; 
+}
+
+.two {
+  background-color: #5A6556; /* FamilyMart green */
+}
+
+.three {
+  background-color: #67A051; /* Common convenience store orange */
+}
+
+.banner-text {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--card-foreground);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  width: 1180px;
+  padding: 4px 10px;
+  font-family: shantell-sans;
+  border-color: #21532B;
+  border: 5px;
+  border-style: solid; 
+}
+
