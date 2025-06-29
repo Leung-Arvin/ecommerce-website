@@ -1,0 +1,54 @@
+.textarea-container {
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+.textarea-label {
+  display: block;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.required-asterisk {
+  color: #d40000;
+  margin-left: 0.25rem;
+}
+
+.textarea-input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  resize: vertical;
+  min-height: 100px;
+  transition: border-color 0.2s ease;
+}
+
+.textarea-input:focus {
+  outline: none;
+  border-color: var(--card-foreground);
+}
+
+.error-message {
+  display: block;
+  color: #d40000;
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+}
+
+.character-count {
+  text-align: right;
+  font-size: 0.8rem;
+  color: #666;
+  margin-top: 0.25rem;
+}
+
+.textarea-container.error .textarea-input {
+  border-color: #d40000;
+}
+
+.textarea-container.error .textarea-label {
+  color: #d40000;
+}

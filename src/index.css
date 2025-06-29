@@ -5,6 +5,7 @@
 
   color-scheme: light dark;
   background-color: #E5E6E1;
+  color: var(--card-foreground);
 
 
   --card-foreground: #44624A;
@@ -19,4 +20,8 @@
   src: url("/fonts/ShantellSans-Bold.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
+}
+
+label {
+  color: var(--card-foreground)
 }
