@@ -2,7 +2,7 @@ import { useRef } from 'react';
 import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
 import Button from "../../components/button/Button";
-import TextArea from "../../components/textarea/Textarea";
+import TextArea from "../../components/textarea/TextArea";
 import ToggleSelect from "../../components/toggle-select/ToggleSelect";
 import "./SurveyPage.css";
 import { useNavigate } from 'react-router';
