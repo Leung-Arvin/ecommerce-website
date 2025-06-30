@@ -1,0 +1,130 @@
+.checkout-form-container {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 30px;
+}
+
+.checkout-content-container {
+  display: flex;
+  gap: 200px
+}
+
+.form-row {
+  display: flex;
+  gap: 10px;
+}
+
+.checkout-order-details {
+  width: 400px;
+  gap: 2rem;
+  position: relative;
+}
+.checkout-form-left {
+  flex: 2;
+}
+
+.checkout-order-details-container {
+  flex: 1;
+  position: relative;
+}
+
+.discount-input {
+  background-color: transparent;
+  padding: 0.75rem;
+  border: 1px solid var(--card-foreground);
+  border-radius: 4px;
+  font-size: 1rem;
+  width: 95%;
+  margin-top: 20px;
+  transition: border-color 0.2s ease;
+}
+
+.discount-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.discount-button {
+  margin-top: 10px;
+  padding: 0.75rem
+}
+
+.checkout-order-details {
+  position: sticky;
+  top: 20px; 
+  background: #f9f9f9;
+  padding: 2rem 3rem;
+  border-radius: 8px;
+  height: fit-content;
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.checkout-cost-breakdown {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #eee;
+}
+
+.checkout-cost-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+}
+
+.checkout-cost-row.total {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #ddd;
+}
+
+.form-select-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin-bottom: 1rem;
+}
+
+.form-select-group label {
+  font-size: 0.875rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.form-select {
+  padding: 0.75rem;
+  border: 1px solid var(--card-foreground);
+  border-radius: 4px;
+  font-size: 1rem;
+  background-color: transparent;
+  appearance: none;
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 1em;
+}
+
+.form-select:focus {
+  outline: none;
+  border-color: var(--card-foreground);
+}
+
+.form-select:disabled {
+  background-color: #f5f5f5;
+  cursor: not-allowed;
+}
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+}

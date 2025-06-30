@@ -1,0 +1,31 @@
+.checkout-confirmation-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  align-items: center;
+}
+
+.checkout-confirmation-image {
+  height: 400px;
+  width: 400px;
+}
+
+.checkout-confirmation-left h2 {
+  font-size: 2rem;
+}
+
+.checkout-confirmation-left p {
+  font-size: 1rem;
+  margin-bottom: 100px;
+}
+
+.checkout-confirmation-left {
+  max-width: 500px;
+}
+
+.checkout-confirmation-content {
+  display: flex; 
+  margin-top: 100px;
+  gap: 100px
+}
