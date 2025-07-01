@@ -7,7 +7,7 @@ import SurveyPage from './pages/survey-page/SurveyPage.jsx';
 import SurveyConfirmationPage from './pages/survey-confirmation-page/SurveyConfirmationPage.jsx';
 import CheckoutFormPage from './pages/checkout-form-page/CheckoutFormPage.jsx';
 import CheckoutConfirmationPage from './pages/checkout-confirmation-page/CheckoutConfirmationPage.jsx';
-import CartProvider from './contexts/CartContext.jsx'
+import { CartProvider } from './contexts/CartContext';
 
 createRoot(document.getElementById('root')).render(
     <CartProvider>
