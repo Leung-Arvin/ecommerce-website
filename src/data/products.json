@@ -154,7 +154,7 @@
         "image": "/product-images/blendy_stick_matcha_ore.jpg"
       },
       {
-        "id": "mtc-2003",
+        "id": "mtc-2004",
         "name": "Kataoka Tsujiri Matcha Latte",
         "description": "Enjoy a cup of hot or iced matcha latte made with fragrant Uji matcha that’s carefully selected by a tea master! The box has four packets and you can either dissolve this instant matcha latte powder in either water or even milk.",
         "price": 5.90,
@@ -167,7 +167,7 @@
         "image": "/product-images/kataoka_tsujiri_matcha_latte.jpg"
       },
       {
-        "id": "mtc-2003",
+        "id": "mtc-2005",
         "name": "Blendy Stick - Matcha Ore",
         "description": "Make your own cup of matcha with this box of tea packets! Each packet can be used to make hot or cold matcha. To make hot matcha just add one packet to 180 ml of hot water. If you want cold matcha, mix one packet with 90 ml of water and then add 5 to 6 ice cubes.",
         "price": 5.90,
@@ -180,7 +180,7 @@
         "image": "/product-images/blendy_stick_matcha_ore.jpg"
       },
       {
-        "id": "mtc-2003",
+        "id": "mtc-2006",
         "name": "MUJI Instant Matcha Latte Bag",
         "description": "Make yourself a cup of milky tea in an instant with this bag of powdered matcha latte! It’s made with rich milk and the finest Uji matcha that’s sourced from Kyoto Prefecture. This was also created specifically for MUJI — a popular Japanese lifestyle brand that's known around the world!",
         "price": 12.90,
@@ -193,7 +193,7 @@
         "image": "/product-images/muji_instant_matcha_latte.jpg"
       },
       {
-        "id": "mtc-2003",
+        "id": "mtc-2007",
         "name": "Mitsu Norin Nitto Matcha Au Lait",
         "description": "Make yourself a cup of delicious uji matcha matcha au lait with this pack of powder sticks! Each stick makes for a cup of delicious matcha latte. Just mix the powder in 120 ml of hot water and you're ready to go. ",
         "price": 14.90,
@@ -206,7 +206,7 @@
         "image": "/product-images/mitsu_morin_nitto_matcha.jpg"
       },
       {
-        "id": "mtc-2003",
+        "id": "mtc-2008",
         "name": "Blendy Café Latory Rich Matcha Latte",
         "description": "This box of powder sticks makes for a special matcha latte that goes perfectly with your favorite slice of cake. Each stick combines the taste of bittersweet match from Japan and the mellow richness of milk!",
         "price": 7.90,
@@ -219,7 +219,7 @@
         "image": "/product-images/blendy_cafe_latory_rich_matcha_latte.jpg"
       },
       {
-        "id": "mtc-2003",
+        "id": "mtc-2009",
         "name": "Nami Okumidori First Harvest Matcha",
         "description": "This rare and super high quality Okumidori ceremonial (first harvest) is a single-origin matcha originating from Kagoshima, Japan. Perfect for your daily matcha ritual: incredible vibrant green color with a creamy and aromatic flavor! It is one of the most prized USDA organic first harvest matchas available.",
         "price": 34.00,
@@ -232,7 +232,7 @@
         "image": "/product-images/nami_okumidori_first_harvest.jpg"
       },
       {
-        "id": "mtc-2003",
+        "id": "mtc-2010",
         "name": "Nami Strawberry Matcha",
         "description": "Name a better combo than strawberry + matcha (you can’t!) This tin of Nami Matcha has the delicious flavor of real strawberries paired with first harvest, organic matcha. This matcha is sourced from Kagoshima, Japan and is for the perfect morning or mid-day pick-me-up! Made with 100% natural strawberry flavor and no added sugar!",
         "price": 32.00,
@@ -273,7 +273,7 @@
         "image": "/product-images/matcha_mille_crepe.jpg"
       },
       {
-        "id": "mtc-3002",
+        "id": "mtc-3003",
         "name": "Matcha Checkboard Cookies",
         "description": "These matcha checkerboard cookies are soft and buttery with a stunning checkerboard pattern. They have a lovely matcha flavour that's perfect for matcha lovers",
         "price": 16.99,
@@ -286,7 +286,7 @@
         "image": "/product-images/matcha_checkboard_cookies.jpg"
       },
       {
-        "id": "mtc-3002",
+        "id": "mtc-3004",
         "name": "Matcha Roll Cake (Swiss Roll)",
         "description": "This matcha roll cake is made with a soft and fluffy matcha cake and it's filled with matcha whipped cream for double the matcha green tea flavour.",
         "price": 20.99,
@@ -299,7 +299,7 @@
         "image": "/product-images/matcha_roll_cake.jpg"
       },
       {
-        "id": "mtc-3002",
+        "id": "mtc-3005",
         "name": "Matcha Scones",
         "description": "These matcha scones are soft and fluffy with crispy edges and sweet matcha icing on top. No dry or dense scones here! They're a fun matcha green tea twist on classic scones that make an easy breakfast or snack.",
         "price": 18.99,
@@ -312,7 +312,7 @@
         "image": "/product-images/matcha_scones.jpg"
       },
       {
-        "id": "mtc-3002",
+        "id": "mtc-3006",
         "name": "Matcha Crinkle Cookies",
         "description": "These matcha crinkle cookies are soft, fluffy, and melt in your mouth. They're packed with matcha flavour with a dusting of powdered sugar on the outside for that classic crinkle cookie look.",
         "price": 17.99,
@@ -325,7 +325,7 @@
         "image": "/product-images/matcha_crinkle_cookies.jpg"
       },
       {
-        "id": "mtc-3002",
+        "id": "mtc-3007",
         "name": "Matcha Basque Cheesecake",
         "description": "This matcha basque cheesecake is a green tea spin on the famous burnt cheesecake. It's caramelized and scorched on the outside with an ultra-creamy interior and fresh whipped cream on top.",
         "price": 17.99,
@@ -338,7 +338,7 @@
         "image": "/product-images/matcha_basque_cheesecake.jpg"
       },
       {
-        "id": "mtc-3002",
+        "id": "mtc-3008",
         "name": "Matcha Madelines",
         "description": "These soft and fluffy matcha madeleines are the perfect little mini cakes. They're made with plenty of matcha flavour with a stunning shiny matcha white chocolate shell.",
         "price": 14.99,
@@ -351,7 +351,7 @@
         "image": "/product-images/matcha_madelines.jpg"
       },
       {
-        "id": "mtc-3002",
+        "id": "mtc-3009",
         "name": "Matcha Milk Bread Turtles",
         "description": "A certified matcha mart treat. Make your day better with these cute and delicious turtles made with a rich chocolate crust on top of a soft matcha bread",
         "price": 15.99,
@@ -364,7 +364,7 @@
         "image": "/product-images/matcha_turtles.jpg"
       },
       {
-        "id": "mtc-3002",
+        "id": "mtc-3010",
         "name": "Matcha Tiramisu",
         "description": "This matcha tiramisu is a delicious twist on a classic Italian dessert with layers of creamy matcha mascarpone cream and soft, spongey ladyfingers soaked in matcha. It all comes together in a heavenly, rich, and decadent bite with plenty of green tea flavour.",
         "price": 20.99,
