@@ -17,6 +17,12 @@ export const CartProvider = ({ children }) => {
     setTimeout(() => setNotification(null), 3000);
   };
 
+  const handleDeleteItem = (indexToRemove) => {
+    setCartItems((prevItems) =>
+      prevItems.filter((_, i) => i !== indexToRemove)
+    );
+  };
+
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
@@ -29,6 +35,7 @@ export const CartProvider = ({ children }) => {
         toggleSidebar,
         isSidebarOpen,
         notification,
+        handleDeleteItem,
       }}
     >
       {children}

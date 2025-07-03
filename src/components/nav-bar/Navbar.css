@@ -199,3 +199,17 @@
 .cart-item-price {
   color: #666;
 }
+
+.delete-item-btn {
+  background: transparent;
+  border: none;
+  font-size: 1.25rem;
+  color: #aa0000;
+  cursor: pointer;
+  margin-left: auto;
+  padding: 0 0.5rem;
+}
+
+.delete-item-btn:hover {
+  color: red;
+}

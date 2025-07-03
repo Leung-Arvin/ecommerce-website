@@ -8,7 +8,13 @@ import bakeryIcon from "../../assets/bakeryLogo.svg";
 import { useCart } from "../../components/cart/CartContext.jsx";
 
 const Navbar = () => {
-  const { cartItems, toggleSidebar, isSidebarOpen, notification } = useCart();
+  const {
+    cartItems,
+    toggleSidebar,
+    isSidebarOpen,
+    notification,
+    handleDeleteItem,
+  } = useCart();
 
   const totalPrice = cartItems.reduce((sum, item) => sum + item.price, 0);
 
@@ -125,6 +131,13 @@ const Navbar = () => {
                     <p className="cart-item-name">{item.name}</p>
                     <p className="cart-item-price">${item.price.toFixed(2)}</p>
                   </div>
+                  <button
+                    className="delete-item-btn"
+                    onClick={() => handleDeleteItem(index)}
+                    aria-label={`Remove ${item.name}`}
+                  >
+                    &times;
+                  </button>
                 </li>
               ))}
             </ul>
