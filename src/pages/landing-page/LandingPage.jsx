@@ -1,5 +1,4 @@
 import "./LandingPage.css";
-import matchaBanner from "../../assets/matchaBanner.svg";
 import PromoCard from "../../components/promo-card/PromoCard";
 import productData from "../../data/products.json";
 import Button from "../../components/button/Button";
@@ -15,7 +14,7 @@ export default function LandingPage() {
     <div className="landing-container">
       <div className="banner-container">
         <img
-          src={matchaBanner}
+          src="/illustrations/matchaBanner.svg"
           alt="Premium Matcha Products"
           className="full-width-banner"
           style={{

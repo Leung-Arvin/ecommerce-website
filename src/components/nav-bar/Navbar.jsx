@@ -1,10 +1,5 @@
 import React from "react";
 import "./Navbar.css";
-import logoMascot from "../../assets/logoMascot.svg";
-import cartLogo from "../../assets/cartLogo.svg";
-import sweetsIcon from "../../assets/sweetsLogo.svg";
-import drinksIcon from "../../assets/drinksLogo.svg";
-import bakeryIcon from "../../assets/bakeryLogo.svg";
 import { useCart } from "../../components/cart/CartContext.jsx";
 import Button from "../button/Button.jsx";
 
@@ -28,7 +23,7 @@ const Navbar = () => {
       <nav className="main-nav">
         <div className="top-nav">
           <div className="logo">
-            <img src={logoMascot} alt="Matcha Mart Mascot" />
+            <img src="/illustrations/logoMascot.svg" alt="Mascot" />
           </div>
 
           <div className="nav-links">
@@ -37,7 +32,7 @@ const Navbar = () => {
 
           <div className="cart">
             <div className="cart-box" onClick={toggleSidebar}>
-              <img src={cartLogo} alt="Cart" />
+              <img src="/illustrations/cartLogo.svg" alt="Cart" />
               <span>
                 {cartItems.length} items ${totalPrice.toFixed(2)}
               </span>
@@ -52,7 +47,7 @@ const Navbar = () => {
           <div className="dropdown">
             <button className="dropdown-toggle">
               <img
-                src={sweetsIcon}
+                src="/illustrations/sweetsLogo.svg"
                 style={{
                   width: "1.5vw",
                   height: "auto",
@@ -72,7 +67,7 @@ const Navbar = () => {
           <div className="dropdown">
             <button className="dropdown-toggle">
               <img
-                src={drinksIcon}
+                src="/illustrations/drinksLogo.svg"
                 style={{
                   width: "1.5vw",
                   height: "auto",
@@ -92,7 +87,7 @@ const Navbar = () => {
           <div className="dropdown">
             <button className="dropdown-toggle">
               <img
-                src={bakeryIcon}
+                src="/illustrations/bakeryLogo.svg"
                 style={{
                   width: "1.5vw",
                   height: "auto",
