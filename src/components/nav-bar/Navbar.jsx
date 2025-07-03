@@ -14,9 +14,13 @@ const Navbar = () => {
     isSidebarOpen,
     notification,
     handleDeleteItem,
+    updateItemQuantity,
   } = useCart();
 
-  const totalPrice = cartItems.reduce((sum, item) => sum + item.price, 0);
+  const totalPrice = cartItems.reduce(
+    (sum, item) => sum + item.price * item.quantity,
+    0
+  );
 
   return (
     <>
@@ -129,7 +133,19 @@ const Navbar = () => {
                   />
                   <div className="cart-item-details">
                     <p className="cart-item-name">{item.name}</p>
-                    <p className="cart-item-price">${item.price.toFixed(2)}</p>
+                    <p className="cart-item-price">
+                      ${(item.price * item.quantity).toFixed(2)}
+                    </p>
+
+                    <div className="quantity-controls">
+                      <button onClick={() => updateItemQuantity(index, -1)}>
+                        -
+                      </button>
+                      <span>{item.quantity}</span>
+                      <button onClick={() => updateItemQuantity(index, 1)}>
+                        +
+                      </button>
+                    </div>
                   </div>
                   <button
                     className="delete-item-btn"

@@ -12,7 +12,8 @@ export const CartProvider = ({ children }) => {
   const [notification, setNotification] = useState(null);
 
   const addToCart = (product) => {
-    setCartItems((prevItems) => [...prevItems, product]);
+    const productWithQuantity = { ...product, quantity: 1 };
+    setCartItems((prevItems) => [...prevItems, productWithQuantity]);
     setNotification(`${product.name} added to cart!`);
     setTimeout(() => setNotification(null), 3000);
   };
@@ -20,6 +21,16 @@ export const CartProvider = ({ children }) => {
   const handleDeleteItem = (indexToRemove) => {
     setCartItems((prevItems) =>
       prevItems.filter((_, i) => i !== indexToRemove)
+    );
+  };
+
+  const updateItemQuantity = (index, amount) => {
+    setCartItems((prevItems) =>
+      prevItems.map((item, i) =>
+        i === index
+          ? { ...item, quantity: Math.max(1, item.quantity + amount) }
+          : item
+      )
     );
   };
 
@@ -36,6 +47,7 @@ export const CartProvider = ({ children }) => {
         isSidebarOpen,
         notification,
         handleDeleteItem,
+        updateItemQuantity,
       }}
     >
       {children}
