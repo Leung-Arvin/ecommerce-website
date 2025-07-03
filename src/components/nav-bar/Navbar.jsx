@@ -27,7 +27,9 @@ const Navbar = () => {
           <div className="cart">
             <div className="cart-box" onClick={toggleSidebar}>
               <img src={cartLogo} alt="Cart" />
-              <span>{cartItems.length} items</span>
+              <span>
+                {cartItems.length} items ${totalPrice.toFixed(2)}
+              </span>
             </div>
           </div>
         </div>
@@ -104,24 +106,39 @@ const Navbar = () => {
         <button className="close-btn" onClick={toggleSidebar}>
           &times;
         </button>
-        <h2>Your Cart</h2>
+        <h1>Your Cart</h1>
+        <hr className="cart-divider" />
 
-        {cartItems.length === 0 ? (
-          <p>Your cart is empty.</p>
-        ) : (
-          <>
-            <ul>
+        <div className="cart-content">
+          {cartItems.length === 0 ? (
+            <p>Your cart is empty.</p>
+          ) : (
+            <ul className="cart-items-list">
               {cartItems.map((item, index) => (
-                <li key={index}>
-                  {item.name} — ${item.price.toFixed(2)}
+                <li className="cart-item" key={index}>
+                  <img
+                    src={item.image}
+                    alt={item.name}
+                    className="cart-item-image"
+                  />
+                  <div className="cart-item-details">
+                    <p className="cart-item-name">{item.name}</p>
+                    <p className="cart-item-price">${item.price.toFixed(2)}</p>
+                  </div>
                 </li>
               ))}
             </ul>
+          )}
+        </div>
 
+        {cartItems.length > 0 && (
+          <>
             <div className="cart-summary">
               <p className="total-price">Total: ${totalPrice.toFixed(2)}</p>
-              <button className="checkout-button">Check Out Now</button>
             </div>
+            <button className="checkout-button fixed-bottom">
+              Check Out Now
+            </button>
           </>
         )}
       </div>
