@@ -1,4 +1,82 @@
-.landing-container {
-  width: 100vw;
+.side-by-side-container {
+  display: flex;
+  gap: 20px;
+  align-items: stretch;
+}
+.container {
+  width: 50vw;
+  height: 43vh;
+  background-color: #44624a;
+  padding: 3em 2em 3em 2em;
+  border-radius: 10px;
+}
+.main-container {
+  margin: 2.5em;
 }
 
+.banner-container {
+  width: 100vw;
+  overflow: hidden;
+  margin-left: calc(-50vw + 50%);
+}
+
+.full-width-banner {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .full-width-banner {
+    height: 200px;
+    object-fit: cover;
+  }
+}
+.hero-banner {
+  flex: 1;
+  background-color: #e5e6e1;
+  padding: 30px;
+  border-radius: 8px;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.promo-section {
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .side-by-side-container {
+    flex-direction: column;
+  }
+}
+
+.product-section {
+  margin-top: 3rem;
+}
+
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.product-section-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+.view-all-link {
+  font-weight: bold;
+  color: #44624a;
+  cursor: pointer;
+}
+
+.view-all-link:hover {
+  opacity: 0.75;
+}

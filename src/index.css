@@ -4,11 +4,10 @@
   margin: 0;
 
   color-scheme: light dark;
-  background-color: #E5E6E1;
+  background-color: #e5e6e1;
   color: var(--card-foreground);
 
-
-  --card-foreground: #44624A;
+  --card-foreground: #44624a;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -23,5 +22,9 @@
 }
 
 label {
-  color: var(--card-foreground)
+  color: var(--card-foreground);
+}
+
+body {
+  margin: 0;
 }
