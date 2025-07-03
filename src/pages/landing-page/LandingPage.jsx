@@ -30,20 +30,23 @@ export default function LandingPage() {
 
       <section className="main-container">
         <div className="side-by-side-container">
-          <section className="container">
+          <div className="container">
             <div className="side-by-side-container">
               <section className="hero-banner">
                 <h2>Celebrate Canada Day!</h2>
-                <h1>20% off your purchase with code GOCANADA</h1>
+                <h1>
+                  20% off your purchase with code: <br />
+                  GOCANADA
+                </h1>
                 <Button color="green">SHOP NOW</Button>
               </section>
               <img
                 src="https://www.tofucute.com/images/blog/matcha600.png"
                 alt=""
-                style={{ width: "50%", borderRadius: "10px" }}
+                style={{ display: "flex", width: "40%", borderRadius: "10px" }}
               />
             </div>
-          </section>
+          </div>
 
           <section className="promo-section">
             {featuredSnacks.map((snack) => (
@@ -52,7 +55,7 @@ export default function LandingPage() {
           </section>
         </div>
         <section className="product-section">
-          <div className="product-header">
+          <div>
             <div>
               <h2>Matcha Drinks</h2>
               <p>Matcha crafted in Uji, Kyoto, Japan.</p>

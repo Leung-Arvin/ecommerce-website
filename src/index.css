@@ -28,3 +28,15 @@ label {
 body {
   margin: 0;
 }
+
+h1 {
+  font-size: 30px;
+  font-weight: 400;
+}
+h2 {
+  font-size: 20px;
+  text-transform: uppercase;
+}
+body {
+  margin: 0;
+}

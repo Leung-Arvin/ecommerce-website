@@ -6,6 +6,7 @@ import sweetsIcon from "../../assets/sweetsLogo.svg";
 import drinksIcon from "../../assets/drinksLogo.svg";
 import bakeryIcon from "../../assets/bakeryLogo.svg";
 import { useCart } from "../../components/cart/CartContext.jsx";
+import Button from "../button/Button.jsx";
 
 const Navbar = () => {
   const {
@@ -165,9 +166,9 @@ const Navbar = () => {
             <div className="cart-summary">
               <p className="total-price">Total: ${totalPrice.toFixed(2)}</p>
             </div>
-            <button className="checkout-button fixed-bottom">
+            <Button color="green" className="fixed-bottom">
               Check Out Now
-            </button>
+            </Button>
           </>
         )}
       </div>

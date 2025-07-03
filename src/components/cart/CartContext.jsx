@@ -12,8 +12,25 @@ export const CartProvider = ({ children }) => {
   const [notification, setNotification] = useState(null);
 
   const addToCart = (product) => {
-    const productWithQuantity = { ...product, quantity: 1 };
-    setCartItems((prevItems) => [...prevItems, productWithQuantity]);
+    setCartItems((prevItems) => {
+      // Check if the product already exists in the cart
+      const existingItemIndex = prevItems.findIndex(
+        (item) => item.id === product.id
+      );
+
+      if (existingItemIndex >= 0) {
+        // If exists, increase quantity
+        return prevItems.map((item, index) =>
+          index === existingItemIndex
+            ? { ...item, quantity: item.quantity + 1 }
+            : item
+        );
+      } else {
+        // If not exists, add new item with quantity 1
+        return [...prevItems, { ...product, quantity: 1 }];
+      }
+    });
+
     setNotification(`${product.name} added to cart!`);
     setTimeout(() => setNotification(null), 3000);
   };
