@@ -10,7 +10,7 @@
         "weight": 61.6,
         "organic": true,
         "stock": 42,
-        "image": "/product-images/fukami_green_tea_pocky.jpg"
+        "image": "/product-images/fukami_green_tea_pocky.png"
       },
       {
         "id": "mtc-1002",
@@ -21,7 +21,7 @@
         "weight": 114,
         "organic": true,
         "stock": 42,
-        "image": "/product-images/sakura_green_tea_pocky.jpg"
+        "image": "/product-images/sakura_green_tea_pocky.png"
       },
       {
         "id": "mtc-1003",
@@ -32,7 +32,7 @@
         "weight": 336,
         "organic": true,
         "stock": 42,
-        "image": "/product-images/green_tea_choco_pie.jpg"
+        "image": "/product-images/green_tea_choco_pie.png"
       },
       {
         "id": "mtc-1004",
@@ -43,7 +43,7 @@
         "weight": 210,
         "organic": true,
         "stock": 42,
-        "image": "/product-images/yuki_japanese_green_tea_mochi.jpg"
+        "image": "/product-images/yuki_japanese_green_tea_mochi.png"
       },
       {
         "id": "mtc-1005",
@@ -54,7 +54,7 @@
         "weight": 250,
         "organic": true,
         "stock": 42,
-        "image": "/product-images/almond_green_tea_spread.jpg"
+        "image": "/product-images/almond_green_tea_spread.png"
       },
       {
         "id": "mtc-1006",
@@ -65,7 +65,7 @@
         "weight": 116,
         "organic": true,
         "stock": 42,
-        "image": "/product-images/kitkat_itoen_matcha.jpg"
+        "image": "/product-images/kitkat_itoen_matcha.png"
       },
       {
         "id": "mtc-1007",
@@ -76,7 +76,7 @@
         "weight": 59.4,
         "organic": true,
         "stock": 42,
-        "image": "/product-images/koeda_chocolate_uji_matcha.jpg"
+        "image": "/product-images/koeda_chocolate_uji_matcha.png"
       },
       {
         "id": "mtc-1008",
@@ -87,7 +87,7 @@
         "weight": 69,
         "organic": true,
         "stock": 42,
-        "image": "/product-images/morinaga_milk_caramel_uji_matcha.jpg"
+        "image": "/product-images/morinaga_milk_caramel_uji_matcha.png"
       },
       {
         "id": "mtc-1009",
@@ -98,7 +98,7 @@
         "weight": 116,
         "organic": true,
         "stock": 42,
-        "image": "/product-images/kit_kat_double_chocolate_matcha_original.jpg"
+        "image": "/product-images/kit_kat_double_chocolate_matcha_original.png"
       },
       {
         "id": "mtc-1010",
@@ -109,7 +109,7 @@
         "weight": 37,
         "organic": true,
         "stock": 42,
-        "image": "/product-images/lotte_mercer_choco_pie_uji_matcha.jpg"
+        "image": "/product-images/lotte_mercer_choco_pie_uji_matcha.png"
       }
     ],
     "drinks": [
@@ -125,7 +125,7 @@
         "weight": 96,
         "organic": true,
         "stock": 36,
-        "image": "/product-images/starbucks_premium_mixes_matcha.jpg"
+        "image": "/product-images/starbucks_premium_mixes_matcha.png"
       },
       {
         "id": "mtc-2002",
@@ -138,7 +138,7 @@
         "weight": 12,
         "organic": false,
         "stock": 24,
-        "image": "/product-images/cat_matcha_latte_powder.jpg"
+        "image": "/product-images/cat_matcha_latte_powder.png"
       },
       {
         "id": "mtc-2003",
@@ -151,7 +151,7 @@
         "serving": "hot/cold",
         "organic": true,
         "stock": 12,
-        "image": "/product-images/blendy_stick_matcha_ore.jpg"
+        "image": "/product-images/blendy_stick_matcha_ore.png"
       },
       {
         "id": "mtc-2004",
@@ -164,7 +164,7 @@
         "serving": "hot/cold",
         "organic": true,
         "stock": 12,
-        "image": "/product-images/kataoka_tsujiri_matcha_latte.jpg"
+        "image": "/product-images/kataoka_tsujiri_matcha_latte.png"
       },
       {
         "id": "mtc-2005",
@@ -177,7 +177,7 @@
         "serving": "hot/cold",
         "organic": true,
         "stock": 12,
-        "image": "/product-images/blendy_stick_matcha_ore.jpg"
+        "image": "/product-images/blendy_stick_matcha_ore.png"
       },
       {
         "id": "mtc-2006",
@@ -190,7 +190,7 @@
         "serving": "hot/cold",
         "organic": true,
         "stock": 12,
-        "image": "/product-images/muji_instant_matcha_latte.jpg"
+        "image": "/product-images/muji_instant_matcha_latte.png"
       },
       {
         "id": "mtc-2007",
@@ -203,7 +203,7 @@
         "serving": "hot/cold",
         "organic": true,
         "stock": 12,
-        "image": "/product-images/mitsu_morin_nitto_matcha.jpg"
+        "image": "/product-images/mitsu_morin_nitto_matcha.png"
       },
       {
         "id": "mtc-2008",
@@ -216,7 +216,7 @@
         "serving": "hot/cold",
         "organic": true,
         "stock": 12,
-        "image": "/product-images/blendy_cafe_latory_rich_matcha_latte.jpg"
+        "image": "/product-images/blendy_cafe_latory_rich_matcha_latte.png"
       },
       {
         "id": "mtc-2009",
@@ -229,7 +229,7 @@
         "serving": "hot/cold",
         "organic": true,
         "stock": 12,
-        "image": "/product-images/nami_okumidori_first_harvest.jpg"
+        "image": "/product-images/nami_okumidori_first_harvest.png"
       },
       {
         "id": "mtc-2010",
@@ -242,7 +242,7 @@
         "serving": "hot/cold",
         "organic": true,
         "stock": 12,
-        "image": "/product-images/nami_strawberry_matcha.jpg"
+        "image": "/product-images/nami_strawberry_matcha.png"
       }
     ],
     "bakery": [
