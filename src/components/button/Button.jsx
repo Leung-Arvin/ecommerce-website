@@ -1,16 +1,17 @@
-import "./Button.css"
+import "./Button.css";
 
 function Button({
   children,
   onClick,
   disabled = false,
-  type = 'button',
-  className = '',
+  type = "button",
+  className = "",
+  color = "",
   ...props
 }) {
   return (
     <button
-      className={`btn ${className}`}
+      className={`btn ${color} ${className}`}
       onClick={onClick}
       disabled={disabled}
       type={type}
@@ -20,6 +21,5 @@ function Button({
     </button>
   );
 }
-
 
 export default Button;

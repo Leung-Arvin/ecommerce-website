@@ -10,7 +10,7 @@
         "weight": 61.6,
         "organic": true,
         "stock": 42,
-        "image": "/product-images/fukami_green_tea_pocky.jpg"
+        "image": "/product-images/fukami_green_tea_pocky.png"
       },
       {
         "id": "mtc-1002",
@@ -21,7 +21,7 @@
         "weight": 114,
         "organic": true,
         "stock": 42,
-        "image": "/product-images/sakura_green_tea_pocky.jpg"
+        "image": "/product-images/sakura_green_tea_pocky.png"
       },
       {
         "id": "mtc-1003",
@@ -32,7 +32,7 @@
         "weight": 336,
         "organic": true,
         "stock": 42,
-        "image": "/product-images/green_tea_choco_pie.jpg"
+        "image": "/product-images/green_tea_choco_pie.png"
       },
       {
         "id": "mtc-1004",
@@ -43,7 +43,7 @@
         "weight": 210,
         "organic": true,
         "stock": 42,
-        "image": "/product-images/yuki_japanese_green_tea_mochi.jpg"
+        "image": "/product-images/yuki_japanese_green_tea_mochi.png"
       },
       {
         "id": "mtc-1005",
@@ -54,7 +54,7 @@
         "weight": 250,
         "organic": true,
         "stock": 42,
-        "image": "/product-images/almond_green_tea_spread.jpg"
+        "image": "/product-images/almond_green_tea_spread.png"
       },
       {
         "id": "mtc-1006",
@@ -65,7 +65,7 @@
         "weight": 116,
         "organic": true,
         "stock": 42,
-        "image": "/product-images/kitkat_itoen_matcha.jpg"
+        "image": "/product-images/kitkat_itoen_matcha.png"
       },
       {
         "id": "mtc-1007",
@@ -76,7 +76,7 @@
         "weight": 59.4,
         "organic": true,
         "stock": 42,
-        "image": "/product-images/koeda_chocolate_uji_matcha.jpg"
+        "image": "/product-images/koeda_chocolate_uji_matcha.png"
       },
       {
         "id": "mtc-1008",
@@ -87,7 +87,7 @@
         "weight": 69,
         "organic": true,
         "stock": 42,
-        "image": "/product-images/morinaga_milk_caramel_uji_matcha.jpg"
+        "image": "/product-images/morinaga_milk_caramel_uji_matcha.png"
       },
       {
         "id": "mtc-1009",
@@ -98,7 +98,7 @@
         "weight": 116,
         "organic": true,
         "stock": 42,
-        "image": "/product-images/kit_kat_double_chocolate_matcha_original.jpg"
+        "image": "/product-images/kit_kat_double_chocolate_matcha_original.png"
       },
       {
         "id": "mtc-1010",
@@ -109,7 +109,7 @@
         "weight": 37,
         "organic": true,
         "stock": 42,
-        "image": "/product-images/lotte_mercer_choco_pie_uji_matcha.jpg"
+        "image": "/product-images/lotte_mercer_choco_pie_uji_matcha.png"
       }
     ],
     "drinks": [
@@ -117,7 +117,7 @@
         "id": "mtc-2001",
         "name": "Starbucks Premium Mixes Matcha Latte 4pcs",
         "description": "Keep yourself warm during rainy days with a cup of high-quality matcha latte! These coffee sticks come from the Starbucks premium blend series. Each stick-shaped pack contains carefully selected matcha which once hot water is added, transforms into a smooth foamy drink that has a deep and creamy taste!",
-        "price": 13.50,
+        "price": 13.5,
         "origin": "Japan",
         "caffeine": "medium",
         "drink_type": "powder",
@@ -125,124 +125,124 @@
         "weight": 96,
         "organic": true,
         "stock": 36,
-        "image": "/product-images/starbucks_premium_mixes_matcha.jpg"
+        "image": "/product-images/starbucks_premium_mixes_matcha.png"
       },
       {
         "id": "mtc-2002",
         "name": "Cat Matcha Latte Powder Sachet",
         "description": "This powdered sachet showcases a cute cat barista! Use it to make your own nice cup of matcha latte. Just mix it in with 200-220 ml of water to make your latte! You can make it even richer by using milk. ",
-        "price": 2.90,
+        "price": 2.9,
         "origin": "Japan",
         "caffeine": "high",
         "serving": "cold",
         "weight": 12,
         "organic": false,
         "stock": 24,
-        "image": "/product-images/cat_matcha_latte_powder.jpg"
+        "image": "/product-images/cat_matcha_latte_powder.png"
       },
       {
         "id": "mtc-2003",
         "name": "Blendy Stick - Matcha Ore",
         "description": "Make your own cup of matcha with this box of tea packets! Each packet can be used to make hot or cold matcha. To make hot matcha just add one packet to 180 ml of hot water. If you want cold matcha, mix one packet with 90 ml of water and then add 5 to 6 ice cubes.",
-        "price": 5.90,
+        "price": 5.9,
         "origin": "Japan",
         "weight": 58.2,
         "caffeine": "very high",
         "serving": "hot/cold",
         "organic": true,
         "stock": 12,
-        "image": "/product-images/blendy_stick_matcha_ore.jpg"
+        "image": "/product-images/blendy_stick_matcha_ore.png"
       },
       {
-        "id": "mtc-2003",
+        "id": "mtc-2004",
         "name": "Kataoka Tsujiri Matcha Latte",
         "description": "Enjoy a cup of hot or iced matcha latte made with fragrant Uji matcha that’s carefully selected by a tea master! The box has four packets and you can either dissolve this instant matcha latte powder in either water or even milk.",
-        "price": 5.90,
+        "price": 5.9,
         "origin": "Japan",
         "weight": 52,
         "caffeine": "very high",
         "serving": "hot/cold",
         "organic": true,
         "stock": 12,
-        "image": "/product-images/kataoka_tsujiri_matcha_latte.jpg"
+        "image": "/product-images/kataoka_tsujiri_matcha_latte.png"
       },
       {
-        "id": "mtc-2003",
+        "id": "mtc-2005",
         "name": "Blendy Stick - Matcha Ore",
         "description": "Make your own cup of matcha with this box of tea packets! Each packet can be used to make hot or cold matcha. To make hot matcha just add one packet to 180 ml of hot water. If you want cold matcha, mix one packet with 90 ml of water and then add 5 to 6 ice cubes.",
-        "price": 5.90,
+        "price": 5.9,
         "origin": "Japan",
         "weight": 58.2,
         "caffeine": "very high",
         "serving": "hot/cold",
         "organic": true,
         "stock": 12,
-        "image": "/product-images/blendy_stick_matcha_ore.jpg"
+        "image": "/product-images/blendy_stick_matcha_ore.png"
       },
       {
-        "id": "mtc-2003",
+        "id": "mtc-2006",
         "name": "MUJI Instant Matcha Latte Bag",
         "description": "Make yourself a cup of milky tea in an instant with this bag of powdered matcha latte! It’s made with rich milk and the finest Uji matcha that’s sourced from Kyoto Prefecture. This was also created specifically for MUJI — a popular Japanese lifestyle brand that's known around the world!",
-        "price": 12.90,
+        "price": 12.9,
         "origin": "Japan",
         "weight": 170,
         "caffeine": "very high",
         "serving": "hot/cold",
         "organic": true,
         "stock": 12,
-        "image": "/product-images/muji_instant_matcha_latte.jpg"
+        "image": "/product-images/muji_instant_matcha_latte.png"
       },
       {
-        "id": "mtc-2003",
+        "id": "mtc-2007",
         "name": "Mitsu Norin Nitto Matcha Au Lait",
         "description": "Make yourself a cup of delicious uji matcha matcha au lait with this pack of powder sticks! Each stick makes for a cup of delicious matcha latte. Just mix the powder in 120 ml of hot water and you're ready to go. ",
-        "price": 14.90,
+        "price": 14.9,
         "origin": "Japan",
         "weight": 96,
         "caffeine": "very high",
         "serving": "hot/cold",
         "organic": true,
         "stock": 12,
-        "image": "/product-images/mitsu_morin_nitto_matcha.jpg"
+        "image": "/product-images/mitsu_morin_nitto_matcha.png"
       },
       {
-        "id": "mtc-2003",
+        "id": "mtc-2008",
         "name": "Blendy Café Latory Rich Matcha Latte",
         "description": "This box of powder sticks makes for a special matcha latte that goes perfectly with your favorite slice of cake. Each stick combines the taste of bittersweet match from Japan and the mellow richness of milk!",
-        "price": 7.90,
+        "price": 7.9,
         "origin": "Japan",
         "weight": 69,
         "caffeine": "very high",
         "serving": "hot/cold",
         "organic": true,
         "stock": 12,
-        "image": "/product-images/blendy_cafe_latory_rich_matcha_latte.jpg"
+        "image": "/product-images/blendy_cafe_latory_rich_matcha_latte.png"
       },
       {
-        "id": "mtc-2003",
+        "id": "mtc-2009",
         "name": "Nami Okumidori First Harvest Matcha",
         "description": "This rare and super high quality Okumidori ceremonial (first harvest) is a single-origin matcha originating from Kagoshima, Japan. Perfect for your daily matcha ritual: incredible vibrant green color with a creamy and aromatic flavor! It is one of the most prized USDA organic first harvest matchas available.",
-        "price": 34.00,
+        "price": 34.0,
         "origin": "Japan",
         "weight": 30,
         "caffeine": "very high",
         "serving": "hot/cold",
         "organic": true,
         "stock": 12,
-        "image": "/product-images/nami_okumidori_first_harvest.jpg"
+        "image": "/product-images/nami_okumidori_first_harvest.png"
       },
       {
-        "id": "mtc-2003",
+        "id": "mtc-2010",
         "name": "Nami Strawberry Matcha",
         "description": "Name a better combo than strawberry + matcha (you can’t!) This tin of Nami Matcha has the delicious flavor of real strawberries paired with first harvest, organic matcha. This matcha is sourced from Kagoshima, Japan and is for the perfect morning or mid-day pick-me-up! Made with 100% natural strawberry flavor and no added sugar!",
-        "price": 32.00,
+        "price": 32.0,
         "origin": "Japan",
         "weight": 30,
         "caffeine": "very high",
         "serving": "hot/cold",
         "organic": true,
         "stock": 12,
-        "image": "/product-images/nami_strawberry_matcha.jpg"
+        "image": "/product-images/nami_strawberry_matcha.png"
       }
     ],
     "bakery": [
@@ -250,7 +250,7 @@
         "id": "mtc-3001",
         "name": "Matcha Almond Croissants",
         "description": "Burnt cheesecake with Kyoto matcha swirls. The creamy interior features a striking marbled effect, while the caramelized crust adds bitter-sweet contrast. Serves 6-8.",
-        "price": 12.00,
+        "price": 12.0,
         "origin": "Canada",
         "servings": 6,
         "dietary": ["vegetarian"],
@@ -273,7 +273,7 @@
         "image": "/product-images/matcha_mille_crepe.jpg"
       },
       {
-        "id": "mtc-3002",
+        "id": "mtc-3003",
         "name": "Matcha Checkboard Cookies",
         "description": "These matcha checkerboard cookies are soft and buttery with a stunning checkerboard pattern. They have a lovely matcha flavour that's perfect for matcha lovers",
         "price": 16.99,
@@ -286,7 +286,7 @@
         "image": "/product-images/matcha_checkboard_cookies.jpg"
       },
       {
-        "id": "mtc-3002",
+        "id": "mtc-3004",
         "name": "Matcha Roll Cake (Swiss Roll)",
         "description": "This matcha roll cake is made with a soft and fluffy matcha cake and it's filled with matcha whipped cream for double the matcha green tea flavour.",
         "price": 20.99,
@@ -299,7 +299,7 @@
         "image": "/product-images/matcha_roll_cake.jpg"
       },
       {
-        "id": "mtc-3002",
+        "id": "mtc-3005",
         "name": "Matcha Scones",
         "description": "These matcha scones are soft and fluffy with crispy edges and sweet matcha icing on top. No dry or dense scones here! They're a fun matcha green tea twist on classic scones that make an easy breakfast or snack.",
         "price": 18.99,
@@ -312,7 +312,7 @@
         "image": "/product-images/matcha_scones.jpg"
       },
       {
-        "id": "mtc-3002",
+        "id": "mtc-3006",
         "name": "Matcha Crinkle Cookies",
         "description": "These matcha crinkle cookies are soft, fluffy, and melt in your mouth. They're packed with matcha flavour with a dusting of powdered sugar on the outside for that classic crinkle cookie look.",
         "price": 17.99,
@@ -325,7 +325,7 @@
         "image": "/product-images/matcha_crinkle_cookies.jpg"
       },
       {
-        "id": "mtc-3002",
+        "id": "mtc-3007",
         "name": "Matcha Basque Cheesecake",
         "description": "This matcha basque cheesecake is a green tea spin on the famous burnt cheesecake. It's caramelized and scorched on the outside with an ultra-creamy interior and fresh whipped cream on top.",
         "price": 17.99,
@@ -338,7 +338,7 @@
         "image": "/product-images/matcha_basque_cheesecake.jpg"
       },
       {
-        "id": "mtc-3002",
+        "id": "mtc-3008",
         "name": "Matcha Madelines",
         "description": "These soft and fluffy matcha madeleines are the perfect little mini cakes. They're made with plenty of matcha flavour with a stunning shiny matcha white chocolate shell.",
         "price": 14.99,
@@ -351,7 +351,7 @@
         "image": "/product-images/matcha_madelines.jpg"
       },
       {
-        "id": "mtc-3002",
+        "id": "mtc-3009",
         "name": "Matcha Milk Bread Turtles",
         "description": "A certified matcha mart treat. Make your day better with these cute and delicious turtles made with a rich chocolate crust on top of a soft matcha bread",
         "price": 15.99,
@@ -364,7 +364,7 @@
         "image": "/product-images/matcha_turtles.jpg"
       },
       {
-        "id": "mtc-3002",
+        "id": "mtc-3010",
         "name": "Matcha Tiramisu",
         "description": "This matcha tiramisu is a delicious twist on a classic Italian dessert with layers of creamy matcha mascarpone cream and soft, spongey ladyfingers soaked in matcha. It all comes together in a heavenly, rich, and decadent bite with plenty of green tea flavour.",
         "price": 20.99,

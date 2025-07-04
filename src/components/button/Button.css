@@ -18,5 +18,24 @@
 
 .btn:hover {
   color: white;
-  background-color: var(--card-foreground)
+  background-color: var(--card-foreground);
+}
+
+.btn.green {
+  background-color: #44624a;
+  color: white;
+}
+
+.btn.white {
+  background-color: white;
+  color: black;
+  border: 1px solid #ccc;
+}
+
+.btn.green:hover {
+  background-color: #2f4433;
+}
+
+.btn.white:hover {
+  background-color: #f0f0f0;
 }
