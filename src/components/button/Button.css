@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: center;
   font-family: inherit;
-  font-weight: 500;
+  font-weight: 900;
   border-radius: 6px;
   padding: 15px 50px;
   cursor: pointer;
@@ -14,6 +14,7 @@
   user-select: none;
   color: var(--card-foreground);
   font-size: 15px;
+  text-transform: uppercase;
 }
 
 .btn:hover {
@@ -28,7 +29,7 @@
 
 .btn.white {
   background-color: white;
-  color: black;
+  color: #44624a;
   border: 1px solid #ccc;
 }
 

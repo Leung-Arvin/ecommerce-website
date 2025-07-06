@@ -1,23 +1,29 @@
 .main-container {
-  margin: 2.5em;
+  margin: 4vw;
 }
 
 .side-by-side-container {
   display: flex;
   gap: 20px;
+  height: auto;
   align-items: stretch;
 }
 
 .container {
+  min-width: 5em;
   width: 100vw;
-  height: 40vh;
-  padding: 3em 2em;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5em;
   background-color: #44624a;
   border-radius: 10px;
 }
 
 .banner-container {
   width: 100vw;
+  height: auto;
   overflow: hidden;
   margin-left: calc(-50vw + 50%);
 }
@@ -30,6 +36,7 @@
 
 .hero-banner {
   flex: 1;
+  height: auto;
   padding: 30px;
   background-color: #e5e6e1;
   border-radius: 8px;

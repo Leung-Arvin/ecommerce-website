@@ -1,0 +1,46 @@
+.product-detail {
+  background-color: #44624a;
+  color: white;
+  gap: 2rem;
+  box-sizing: border-box;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.details-container {
+  width: 70vw;
+  gap: 10rem;
+  margin-top: 5em;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.detail-info {
+  max-width: 30em;
+}
+
+.detail-wrapper {
+  display: flex;
+  background: #527659;
+  padding: 2rem 7rem;
+  border-radius: 8px;
+  height: auto;
+  gap: 5em;
+}
+
+.in-stock {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: bold;
+}
+
+.in-stock-circle {
+  width: 1rem;
+  height: 1rem;
+  background-color: #4caf50;
+  border-radius: 50%;
+  display: inline-block;
+}

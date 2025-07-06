@@ -43,7 +43,11 @@ export default function LandingPage() {
               <img
                 src="https://www.tofucute.com/images/blog/matcha600.png"
                 alt=""
-                style={{ display: "flex", width: "40%", borderRadius: "10px" }}
+                style={{
+                  display: "flex",
+                  width: "40%",
+                  borderRadius: "10px",
+                }}
               />
             </div>
           </div>

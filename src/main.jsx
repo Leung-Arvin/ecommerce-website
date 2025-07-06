@@ -8,6 +8,7 @@ import SurveyPage from "./pages/survey-page/SurveyPage.jsx";
 import SurveyConfirmationPage from "./pages/survey-confirmation-page/SurveyConfirmationPage.jsx";
 import CheckoutFormPage from "./pages/checkout-form-page/CheckoutFormPage.jsx";
 import CheckoutConfirmationPage from "./pages/checkout-confirmation-page/CheckoutConfirmationPage.jsx";
+import ProductDetail from "./pages/product-details/ProductDetail.jsx";
 
 createRoot(document.getElementById("root")).render(
   <CartProvider>
@@ -24,6 +25,7 @@ createRoot(document.getElementById("root")).render(
           path="/checkout-confirmation"
           element={<CheckoutConfirmationPage />}
         />
+        <Route path="/products/:id" element={<ProductDetail />} />
       </Routes>
     </BrowserRouter>
   </CartProvider>

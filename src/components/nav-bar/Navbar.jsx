@@ -2,6 +2,7 @@ import React from "react";
 import "./Navbar.css";
 import { useCart } from "../../components/cart/CartContext.jsx";
 import Button from "../button/Button.jsx";
+import { Route, Link } from "react-router";
 
 const Navbar = () => {
   const {
@@ -22,9 +23,9 @@ const Navbar = () => {
     <>
       <nav className="main-nav">
         <div className="top-nav">
-          <div className="logo">
+          <Link to="/" className="logo">
             <img src="/illustrations/logoMascot.svg" alt="Mascot" />
-          </div>
+          </Link>
 
           <div className="nav-links">
             <a href="#">Complete our survey!</a>
@@ -55,13 +56,8 @@ const Navbar = () => {
                   verticalAlign: "middle",
                 }}
               />
-              Sweets ▼
+              Sweets
             </button>
-            <div className="dropdown-menu">
-              <a href="#">Matcha Chocolate</a>
-              <a href="#">Candy & Hard Sweets</a>
-              <a href="#">Cookies</a>
-            </div>
           </div>
 
           <div className="dropdown">
@@ -75,13 +71,8 @@ const Navbar = () => {
                   verticalAlign: "middle",
                 }}
               />
-              Drinks ▼
+              Drinks
             </button>
-            <div className="dropdown-menu">
-              <a href="#">Matcha Powder</a>
-              <a href="#">Bottled Drinks</a>
-              <a href="#">Latte Mixes</a>
-            </div>
           </div>
 
           <div className="dropdown">
@@ -95,13 +86,8 @@ const Navbar = () => {
                   verticalAlign: "middle",
                 }}
               />
-              Bakery ▼
+              Bakery
             </button>
-            <div className="dropdown-menu">
-              <a href="#">Cakes</a>
-              <a href="#">Pastries</a>
-              <a href="#">Mochi</a>
-            </div>
           </div>
 
           <a href="#">Browse All</a>
