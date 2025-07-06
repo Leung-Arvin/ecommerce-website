@@ -20,33 +20,48 @@ export default function LandingPage() {
   const bakerySectionRef = useRef(null);
 
   useEffect(() => {
-    gsap.set([heroBannerRef.current, promoSectionRef.current, drinksSectionRef.current, bakerySectionRef.current], {
-      opacity: 0,
-      y: 20
-    });
+    gsap.set(
+      [
+        heroBannerRef.current,
+        promoSectionRef.current,
+        drinksSectionRef.current,
+        bakerySectionRef.current,
+      ],
+      {
+        opacity: 0,
+        y: 20,
+      }
+    );
     const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
 
     tl.to(heroBannerRef.current, {
       opacity: 1,
       y: 0,
-      duration: 0.8
+      duration: 0.8,
     })
-    .to(promoSectionRef.current, {
-      opacity: 1,
-      y: 0,
-      duration: 0.6
-    }, "-=0.4")
-    .to(drinksSectionRef.current, {
-      opacity: 1,
-      y: 0,
-      duration: 0.6
-    })
-    .to(bakerySectionRef.current, {
-      opacity: 1,
-      y: 0,
-      duration: 0.6
-    }, "-=0.3");
-
+      .to(
+        promoSectionRef.current,
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.6,
+        },
+        "-=0.4"
+      )
+      .to(drinksSectionRef.current, {
+        opacity: 1,
+        y: 0,
+        duration: 0.6,
+      })
+      .to(
+        bakerySectionRef.current,
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.6,
+        },
+        "-=0.3"
+      );
   }, []);
 
   return (
@@ -64,7 +79,9 @@ export default function LandingPage() {
                   20% off your purchase with code: <br />
                   GOCANADA
                 </h1>
-                <Button onClick={() => navigate("/browse")} color="green">SHOP NOW</Button>
+                <Button onClick={() => navigate("/browse")} color="green">
+                  SHOP NOW
+                </Button>
               </section>
               <img
                 src="https://www.tofucute.com/images/blog/matcha600.png"
@@ -106,7 +123,10 @@ export default function LandingPage() {
           <div className="product-header">
             <div>
               <h2>Matcha Bakery</h2>
-              <p>Matcha crafted in Uji, Kyoto, Japan.</p>
+              <p>
+                Handcrafted, home-baked pastries made fresh daily at the Matcha
+                Mart, using premium matcha from Uji, Kyoto, Japan.
+              </p>
             </div>
             <Link to="/bakery" className="view-all-link">
               View All
