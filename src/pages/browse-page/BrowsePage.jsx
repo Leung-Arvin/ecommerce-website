@@ -3,16 +3,17 @@ import productsData from "../../data/products.json";
 import AccordionFilter from "../../components/accordion-filter/AccordionFilter";
 import CheckboxFilter from "../../components/checkbox-filter/CheckboxFilter";
 import ProductCard from "../../components/product-card/ProductCard";
-import { useState, useEffect, useMemo } from "react";
-import Button from "../../components/button/Button"
+import { useState, useEffect, useMemo, useRef } from "react";
+import Button from "../../components/button/Button";
 import Navbar from "../../components/nav-bar/Navbar";
+import { gsap } from "gsap/gsap-core";
 
 export default function BrowsePage({ product }) {
   const [products, setProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [sortedProducts, setSortedProducts] = useState([]);
   const [sortOption, setSortOption] = useState("price-low-high");
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchQuery, setSearchQuery] = useState("");
   const [filters, setFilters] = useState({
     category: [],
     origin: [],
@@ -21,74 +22,129 @@ export default function BrowsePage({ product }) {
     inStock: false,
     brands: [],
   });
+  const filtersRef = useRef(null);
+  const productsHeaderRef = useRef(null);
+  const productsGridRef = useRef(null);
+  const productCardsRef = useRef([]);
+
+  useEffect(() => {
+    gsap.set([filtersRef.current, productsHeaderRef.current], {
+      opacity: 0,
+      y: 20,
+    });
+    gsap.set(productsGridRef.current, { opacity: 0 });
+    gsap.set(productCardsRef.current, {
+      opacity: 0,
+      y: 20,
+      stagger: 0.1,
+    });
+
+    // Create animation timeline
+    const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
+
+    // Animate filters and header
+    tl.to(filtersRef.current, {
+      opacity: 1,
+      y: 0,
+      duration: 0.6,
+    })
+      .to(
+        productsHeaderRef.current,
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.6,
+        },
+        "-=0.3"
+      )
+      .to(productsGridRef.current, {
+        opacity: 1,
+        duration: 0.4,
+      })
+      .to(
+        productCardsRef.current,
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.5,
+          stagger: 0.05,
+        },
+        "-=0.2"
+      );
+
+    return () => {
+      productCardsRef.current = [];
+    };
+  }, []);
 
   const filterCounts = useMemo(() => {
     const counts = {
       category: {},
       origin: {},
       priceRanges: {},
-      brands: {}
+      brands: {},
     };
 
     const countProducts = (filterType, value) => {
-      return products.filter(p => {
-
-        if(searchQuery && p.name.toLowerCase().includes(searchQuery.toLowerCase())) {
+      return products.filter((p) => {
+        if (
+          searchQuery &&
+          p.name.toLowerCase().includes(searchQuery.toLowerCase())
+        ) {
           return false;
         }
 
-        if (filters.category.length > 0 && filterType !== 'category') {
-          const productCategory = Object.keys(productsData.products).find(cat => 
-            productsData.products[cat].some(prod => prod.id === p.id)
+        if (filters.category.length > 0 && filterType !== "category") {
+          const productCategory = Object.keys(productsData.products).find(
+            (cat) => productsData.products[cat].some((prod) => prod.id === p.id)
           );
           if (!filters.category.includes(productCategory)) return false;
         }
 
-        if (filters.origin.length > 0 && filterType !== 'origin') {
+        if (filters.origin.length > 0 && filterType !== "origin") {
           if (!filters.origin.includes(p.origin)) return false;
         }
 
-        if (filters.priceRanges.length > 0 && filterType !== 'priceRanges') {
-          const matchesPriceRange = filters.priceRanges.some(range => {
-            const [min, max] = range.split('-').map(Number);
-            if (range.endsWith('+')) {
-              return p.price >= Number(range.replace('+', ''));
+        if (filters.priceRanges.length > 0 && filterType !== "priceRanges") {
+          const matchesPriceRange = filters.priceRanges.some((range) => {
+            const [min, max] = range.split("-").map(Number);
+            if (range.endsWith("+")) {
+              return p.price >= Number(range.replace("+", ""));
             }
             return p.price >= min && p.price <= max;
           });
           if (!matchesPriceRange) return false;
         }
 
-        if (filters.organic && filterType !== 'organic') {
+        if (filters.organic && filterType !== "organic") {
           if (!p.organic) return false;
         }
 
-        if (filters.inStock && filterType !== 'inStock') {
+        if (filters.inStock && filterType !== "inStock") {
           if (p.stock <= 0) return false;
         }
 
-        if (filters.brands.length > 0 && filterType !== 'brands') {
+        if (filters.brands.length > 0 && filterType !== "brands") {
           if (!filters.brands.includes(p.brand)) return false;
         }
 
         switch (filterType) {
-          case 'category':
-            {
-            const cat = Object.keys(productsData.products).find(c => 
-              productsData.products[c].some(prod => prod.id === p.id)
+          case "category": {
+            const cat = Object.keys(productsData.products).find((c) =>
+              productsData.products[c].some((prod) => prod.id === p.id)
             );
-            return cat === value;}
-          case 'origin':
+            return cat === value;
+          }
+          case "origin":
             return p.origin === value;
-          case 'priceRanges':
-            {
-            const [min, max] = value.split('-').map(Number);
-            if (value.endsWith('+')) {
-              return p.price >= Number(value.replace('+', ''));
+          case "priceRanges": {
+            const [min, max] = value.split("-").map(Number);
+            if (value.endsWith("+")) {
+              return p.price >= Number(value.replace("+", ""));
             }
             return p.price >= min && p.price <= max;
-            }
-          case 'brands':
+          }
+          case "brands":
             return p.brand === value;
           default:
             return true;
@@ -96,20 +152,20 @@ export default function BrowsePage({ product }) {
       }).length;
     };
 
-    productsData.facets.category.forEach(category => {
-      counts.category[category] = countProducts('category', category);
+    productsData.facets.category.forEach((category) => {
+      counts.category[category] = countProducts("category", category);
     });
 
-    productsData.facets.origin.forEach(origin => {
-      counts.origin[origin] = countProducts('origin', origin);
+    productsData.facets.origin.forEach((origin) => {
+      counts.origin[origin] = countProducts("origin", origin);
     });
 
-    productsData.facets.priceRanges.forEach(range => {
-      counts.priceRanges[range] = countProducts('priceRanges', range);
+    productsData.facets.priceRanges.forEach((range) => {
+      counts.priceRanges[range] = countProducts("priceRanges", range);
     });
 
-    productsData.facets.brand.forEach(brand => {
-      counts.brands[brand] = countProducts('brands', brand);
+    productsData.facets.brand.forEach((brand) => {
+      counts.brands[brand] = countProducts("brands", brand);
     });
 
     return counts;
@@ -120,6 +176,14 @@ export default function BrowsePage({ product }) {
       setFilters((prev) => ({
         ...prev,
         category: [product],
+        origin: [],
+        priceRanges: [],
+        brands: [],
+      }));
+    } else {
+      setFilters((prev) => ({
+        ...prev,
+        category: [],
         origin: [],
         priceRanges: [],
         brands: [],
@@ -138,7 +202,7 @@ export default function BrowsePage({ product }) {
     let result = [...products];
 
     if (searchQuery) {
-      result = result.filter(product => 
+      result = result.filter((product) =>
         product.name.toLowerCase().includes(searchQuery.toLowerCase())
       );
     }
@@ -236,134 +300,138 @@ export default function BrowsePage({ product }) {
 
   return (
     <>
-    <Navbar/>
-    <div className="browse-page-container">
-      <div className="browse-page-filters">
-      <div className="search-bar-container">
-          <input
-            type="text"
-            placeholder="Search products..."
-            value={searchQuery}
-            onChange={handleSearchChange}
-            className="search-input"
-          />
-          {searchQuery && (
-            <Button className="clear-search-btn" onClick={() => setSearchQuery('')}>
-              X
-            </Button>
-          )}
-        </div>
-        <hr/>
-        {!product && (
-          <>
-            <AccordionFilter title="Categories">
-              {productsData.facets.category.map((category) => (
-                <CheckboxFilter
-                  key={category}
-                  id={`category-${category}`}
-                  label={category.charAt(0).toUpperCase() + category.slice(1)}
-                  checked={filters.category.includes(category)}
-                  count={filterCounts.category[category]}
-                  onChange={() => handleFilterChange("category", category)}
-                />
-              ))}
-            </AccordionFilter>
-            <hr />
-          </>
-        )}
-
-        <AccordionFilter title="Brands">
-          {productsData.facets.brand.map((brand) => (
-            <CheckboxFilter
-              key={brand}
-              id={`brand-${brand}`}
-              label={brand}
-              count={filterCounts.brands[brand]}
-              checked={filters.brands.includes(brand)}
-              onChange={() => handleFilterChange("brands", brand)}
+      <Navbar />
+      <div className="browse-page-container">
+        <div className="browse-page-filters" ref={filtersRef}>
+          <div className="search-bar-container">
+            <input
+              type="text"
+              placeholder="Search products..."
+              value={searchQuery}
+              onChange={handleSearchChange}
+              className="search-input"
             />
-          ))}
-        </AccordionFilter>
-        <hr />
-
-        <AccordionFilter title="Origin">
-          {productsData.facets.origin.map((origin) => (
-            <CheckboxFilter
-              key={origin}
-              id={`origin-${origin}`}
-              label={origin}
-              checked={filters.origin.includes(origin)}
-              count={filterCounts.origin[origin]}
-              onChange={() => handleFilterChange("origin", origin)}
-            />
-          ))}
-        </AccordionFilter>
-        <hr />
-        <AccordionFilter title="Price Range">
-          {productsData.facets.priceRanges.map((range) => (
-            <CheckboxFilter
-              key={range}
-              id={`price-${range}`}
-              label={range.replace("-", " - ").replace("+", "+")}
-              count={filterCounts.priceRanges[range]}
-              checked={filters.priceRanges.includes(range)}
-              onChange={() => handleFilterChange("priceRanges", range)}
-            />
-          ))}
-        </AccordionFilter>
-
-      </div>
-      <div className="browse-page-products">
-        <div className="browse-page-products-header">
-          <div>
-            <h2 className="products-title">
-              {product
-                ? product.toUpperCase().replace("_", " ")
-                : "ALL PRODUCTS"}
-            </h2>
-            <p className="filter-results">{filteredProducts.length} Results</p>
-          </div>
-          <div className="sort-by-container">
-            <p>Sort by:</p>
-            <div className="dropdown-select-sort">
-              <select value={sortOption} onChange={handleSortChange}>
-                <option value="featured">Featured</option>
-                <option value="price-low-high">Price: Low to High</option>
-                <option value="price-high-low">Price: High to Low</option>
-                <option value="name-a-z">Name: A-Z</option>
-                <option value="name-z-a">Name: Z-A</option>
-              </select>
-            </div>
-          </div>
-        </div>
-        <hr />
-        <div className="products-grid">
-          {sortedProducts.length > 0 ? (
-            sortedProducts.map((product) => (
-              <ProductCard key={product.id} product={product} />
-            ))
-          ) : (
-            <div className="no-results">
-              <p>No products match your filters.</p>
-              <button
-                className="clear-filters-btn"
-                onClick={() =>
-                  setFilters({
-                    category: [],
-                    origin: [],
-                    priceRanges: [],
-                    organic: false,
-                    inStock: false,
-                  })
-                }
+            {searchQuery && (
+              <Button
+                className="clear-search-btn"
+                onClick={() => setSearchQuery("")}
               >
-                Clear all filters
-              </button>
-            </div>
+                X
+              </Button>
+            )}
+          </div>
+          <hr />
+          {!product && (
+            <>
+              <AccordionFilter title="Categories">
+                {productsData.facets.category.map((category) => (
+                  <CheckboxFilter
+                    key={category}
+                    id={`category-${category}`}
+                    label={category.charAt(0).toUpperCase() + category.slice(1)}
+                    checked={filters.category.includes(category)}
+                    count={filterCounts.category[category]}
+                    onChange={() => handleFilterChange("category", category)}
+                  />
+                ))}
+              </AccordionFilter>
+              <hr />
+            </>
           )}
+
+          <AccordionFilter title="Brands">
+            {productsData.facets.brand.map((brand) => (
+              <CheckboxFilter
+                key={brand}
+                id={`brand-${brand}`}
+                label={brand}
+                count={filterCounts.brands[brand]}
+                checked={filters.brands.includes(brand)}
+                onChange={() => handleFilterChange("brands", brand)}
+              />
+            ))}
+          </AccordionFilter>
+          <hr />
+
+          <AccordionFilter title="Origin">
+            {productsData.facets.origin.map((origin) => (
+              <CheckboxFilter
+                key={origin}
+                id={`origin-${origin}`}
+                label={origin}
+                checked={filters.origin.includes(origin)}
+                count={filterCounts.origin[origin]}
+                onChange={() => handleFilterChange("origin", origin)}
+              />
+            ))}
+          </AccordionFilter>
+          <hr />
+          <AccordionFilter title="Price Range">
+            {productsData.facets.priceRanges.map((range) => (
+              <CheckboxFilter
+                key={range}
+                id={`price-${range}`}
+                label={range.replace("-", " - ").replace("+", "+")}
+                count={filterCounts.priceRanges[range]}
+                checked={filters.priceRanges.includes(range)}
+                onChange={() => handleFilterChange("priceRanges", range)}
+              />
+            ))}
+          </AccordionFilter>
+        </div>
+        <div className="browse-page-products">
+          <div className="browse-page-products-header" ref={productsHeaderRef}>
+            <div>
+              <h2 className="products-title">
+                {product
+                  ? product.toUpperCase().replace("_", " ")
+                  : "ALL PRODUCTS"}
+              </h2>
+              <p className="filter-results">
+                {filteredProducts.length} Results
+              </p>
+            </div>
+            <div className="sort-by-container">
+              <p>Sort by:</p>
+              <div className="dropdown-select-sort">
+                <select value={sortOption} onChange={handleSortChange}>
+                  <option value="featured">Featured</option>
+                  <option value="price-low-high">Price: Low to High</option>
+                  <option value="price-high-low">Price: High to Low</option>
+                  <option value="name-a-z">Name: A-Z</option>
+                  <option value="name-z-a">Name: Z-A</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <hr />
+          <div className="products-grid" ref={productsGridRef}>
+            {sortedProducts.length > 0 ? (
+              sortedProducts.map((product) => (
+                <ProductCard key={product.id} product={product} />
+              ))
+            ) : (
+              <div className="no-results">
+                <p>No products match your filters.</p>
+                <button
+                  className="clear-filters-btn"
+                  onClick={() =>
+                    setFilters({
+                      category: [],
+                      origin: [],
+                      priceRanges: [],
+                      organic: false,
+                      inStock: false,
+                    })
+                  }
+                >
+                  Clear all filters
+                </button>
+              </div>
+            )}
+          </div>
         </div>
       </div>
-    </div>
     </>
   );
 }
