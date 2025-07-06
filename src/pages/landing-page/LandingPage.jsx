@@ -4,29 +4,19 @@ import productData from "../../data/products.json";
 import Button from "../../components/button/Button";
 import Navbar from "../../components/nav-bar/Navbar";
 import ProductCard from "../../components/product-card/ProductCard";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import MainBanner from "../../components/main-banner/MainBanner";
 
 export default function LandingPage() {
+  let navigate = useNavigate();
   const featuredSnacks = productData.products.snacks.slice(1, 4);
-  const matchaDrinks = productData.products.drinks.slice(0, 5);
-  const matchaBakery = productData.products.bakery.slice(2, 7);
+  const matchaDrinks = productData.products.drinks;
+  const matchaBakery = productData.products.bakery;
 
   return (
     <div className="landing-container">
       <Navbar />
-      <div className="banner-container">
-        <img
-          src="/illustrations/matchaBanner.svg"
-          alt="Premium Matcha Products"
-          className="full-width-banner"
-          style={{
-            width: "100vw",
-            height: "auto",
-            display: "block",
-            margin: "0 auto",
-          }}
-        />
-      </div>
+      <MainBanner/>
 
       <section className="main-container">
         <div className="side-by-side-container">
@@ -38,7 +28,7 @@ export default function LandingPage() {
                   20% off your purchase with code: <br />
                   GOCANADA
                 </h1>
-                <Button color="green">SHOP NOW</Button>
+                <Button onClick={() => navigate("/browse") } color="green">SHOP NOW</Button>
               </section>
               <img
                 src="https://www.tofucute.com/images/blog/matcha600.png"
@@ -64,15 +54,16 @@ export default function LandingPage() {
               <h2>Matcha Drinks</h2>
               <p>Matcha crafted in Uji, Kyoto, Japan.</p>
             </div>
-            <Link to="/products/drinks" className="view-all-link">
+            <Link to="/drinks" className="view-all-link">
               View All
             </Link>
           </div>
-
-          <div className="product-grid">
+          <div className="product-scroll-container">
+          <div className="product-scroll">
             {matchaDrinks.map((drink) => (
               <ProductCard key={drink.id} product={drink} />
             ))}
+          </div>
           </div>
         </section>
         <section className="product-section">
@@ -81,15 +72,16 @@ export default function LandingPage() {
               <h2>Matcha Bakery</h2>
               <p>Matcha crafted in Uji, Kyoto, Japan.</p>
             </div>
-            <a href="" className="view-all-link">
+            <Link to="/bakery" className="view-all-link">
               View All
-            </a>
+            </Link>
           </div>
-
-          <div className="product-grid">
+          <div className="product-scroll-container">
+          <div className="product-scroll">
             {matchaBakery.map((bakery) => (
               <ProductCard key={bakery.id} product={bakery} />
             ))}
+          </div>
           </div>
         </section>
       </section>

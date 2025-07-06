@@ -10,7 +10,7 @@ export const ProductList = ({ items = [], className = '' }) => {
           <div key={`${product.id}-${index}`} className="product-item">
             <div className="product-info">
               <img src={product.image} className='product-image'/>
-              <span className="product-name">{product.name}</span>
+              <span className="list-product-name">{product.name}</span>
               {product.quantity > 1 && (
                 <span className="product-quantity">×{product.quantity}</span>
               )}

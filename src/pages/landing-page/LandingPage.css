@@ -45,6 +45,9 @@
   justify-content: center;
 }
 
+.hero-banner h2 {
+  font-size: 45px;
+}
 .promo-section {
   flex: 1;
 }
@@ -53,13 +56,37 @@
   margin-top: 3rem;
 }
 
-.product-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: left;
-  gap: 1.8rem;
-  margin-top: 1.5rem;
+.product-scroll-container {
+  width: 100%;
+  overflow-x: auto;
+  padding-bottom: 1rem; /* Space for scrollbar */
 }
+
+.product-scroll {
+  display: flex;
+  gap: 1rem; 
+  width: max-content; 
+  padding: 0.5rem 0; 
+}
+
+.product-scroll-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.product-scroll-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.product-scroll-container::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+.product-scroll-container::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 
 .view-all-link {
   font-weight: bold;

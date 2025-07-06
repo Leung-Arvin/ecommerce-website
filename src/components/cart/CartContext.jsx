@@ -51,6 +51,10 @@ export const CartProvider = ({ children }) => {
     );
   };
 
+  const clearCart = () => {
+    setCartItems([]);
+  }
+
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
@@ -65,6 +69,7 @@ export const CartProvider = ({ children }) => {
         notification,
         handleDeleteItem,
         updateItemQuantity,
+        clearCart
       }}
     >
       {children}

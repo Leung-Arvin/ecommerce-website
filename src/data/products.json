@@ -10,6 +10,7 @@
         "weight": 61.6,
         "organic": true,
         "stock": 42,
+        "brand": "Glico",
         "image": "/product-images/fukami_green_tea_pocky.png"
       },
       {
@@ -21,6 +22,7 @@
         "weight": 114,
         "organic": true,
         "stock": 42,
+        "brand": "Glico",
         "image": "/product-images/sakura_green_tea_pocky.png"
       },
       {
@@ -32,6 +34,7 @@
         "weight": 336,
         "organic": true,
         "stock": 42,
+        "brand": "Lotte",
         "image": "/product-images/green_tea_choco_pie.png"
       },
       {
@@ -43,6 +46,7 @@
         "weight": 210,
         "organic": true,
         "stock": 42,
+        "brand": "Yuki & Love",
         "image": "/product-images/yuki_japanese_green_tea_mochi.png"
       },
       {
@@ -54,6 +58,7 @@
         "weight": 250,
         "organic": true,
         "stock": 42,
+        "brand": "Samkwang",
         "image": "/product-images/almond_green_tea_spread.png"
       },
       {
@@ -65,7 +70,8 @@
         "weight": 116,
         "organic": true,
         "stock": 42,
-        "image": "/product-images/kitkat_itoen_matcha.png"
+        "brand": "KitKat",
+        "image": "/product-images/kit_kat_itoen_matcha_latte.png"
       },
       {
         "id": "mtc-1007",
@@ -76,6 +82,7 @@
         "weight": 59.4,
         "organic": true,
         "stock": 42,
+        "brand": "Koeda",
         "image": "/product-images/koeda_chocolate_uji_matcha.png"
       },
       {
@@ -87,6 +94,7 @@
         "weight": 69,
         "organic": true,
         "stock": 42,
+        "brand": "Morinaga",
         "image": "/product-images/morinaga_milk_caramel_uji_matcha.png"
       },
       {
@@ -98,6 +106,7 @@
         "weight": 116,
         "organic": true,
         "stock": 42,
+        "brand": "KitKat",
         "image": "/product-images/kit_kat_double_chocolate_matcha_original.png"
       },
       {
@@ -109,6 +118,7 @@
         "weight": 37,
         "organic": true,
         "stock": 42,
+        "brand": "Lotte",
         "image": "/product-images/lotte_mercer_choco_pie_uji_matcha.png"
       }
     ],
@@ -125,6 +135,7 @@
         "weight": 96,
         "organic": true,
         "stock": 36,
+        "brand": "Starbucks",
         "image": "/product-images/starbucks_premium_mixes_matcha.png"
       },
       {
@@ -138,6 +149,7 @@
         "weight": 12,
         "organic": false,
         "stock": 24,
+        "brand": "Cat",
         "image": "/product-images/cat_matcha_latte_powder.png"
       },
       {
@@ -151,6 +163,7 @@
         "serving": "hot/cold",
         "organic": true,
         "stock": 12,
+        "brand": "Blendy",
         "image": "/product-images/blendy_stick_matcha_ore.png"
       },
       {
@@ -164,6 +177,7 @@
         "serving": "hot/cold",
         "organic": true,
         "stock": 12,
+        "brand": "Kataoka",
         "image": "/product-images/kataoka_tsujiri_matcha_latte.png"
       },
       {
@@ -177,6 +191,7 @@
         "serving": "hot/cold",
         "organic": true,
         "stock": 12,
+        "brand": "Blendy",
         "image": "/product-images/blendy_stick_matcha_ore.png"
       },
       {
@@ -190,6 +205,7 @@
         "serving": "hot/cold",
         "organic": true,
         "stock": 12,
+        "brand": "Muji",
         "image": "/product-images/muji_instant_matcha_latte.png"
       },
       {
@@ -203,6 +219,7 @@
         "serving": "hot/cold",
         "organic": true,
         "stock": 12,
+        "brand": "Mitsu",
         "image": "/product-images/mitsu_morin_nitto_matcha.png"
       },
       {
@@ -216,6 +233,7 @@
         "serving": "hot/cold",
         "organic": true,
         "stock": 12,
+        "brand": "Blendy",
         "image": "/product-images/blendy_cafe_latory_rich_matcha_latte.png"
       },
       {
@@ -229,6 +247,7 @@
         "serving": "hot/cold",
         "organic": true,
         "stock": 12,
+        "brand": "Nami",
         "image": "/product-images/nami_okumidori_first_harvest.png"
       },
       {
@@ -242,6 +261,7 @@
         "serving": "hot/cold",
         "organic": true,
         "stock": 12,
+        "brand": "Nami",
         "image": "/product-images/nami_strawberry_matcha.png"
       }
     ],
@@ -257,6 +277,7 @@
         "shelfLife": "5 days refrigerated",
         "organic": true,
         "stock": 8,
+        "brand": "Matcha Mart",
         "image": "/product-images/matcha_almond_croissants.jpg"
       },
       {
@@ -270,6 +291,7 @@
         "shelfLife": "2 days",
         "organic": false,
         "stock": 18,
+        "brand": "Matcha Mart",
         "image": "/product-images/matcha_mille_crepe.jpg"
       },
       {
@@ -283,6 +305,7 @@
         "shelfLife": "2 days",
         "organic": false,
         "stock": 18,
+        "brand": "Matcha Mart",
         "image": "/product-images/matcha_checkboard_cookies.jpg"
       },
       {
@@ -296,6 +319,7 @@
         "shelfLife": "2 days",
         "organic": false,
         "stock": 18,
+        "brand": "Matcha Mart",
         "image": "/product-images/matcha_roll_cake.jpg"
       },
       {
@@ -309,6 +333,7 @@
         "shelfLife": "2 days",
         "organic": false,
         "stock": 18,
+        "brand": "Matcha Mart",
         "image": "/product-images/matcha_scones.jpg"
       },
       {
@@ -322,6 +347,7 @@
         "shelfLife": "2 days",
         "organic": false,
         "stock": 18,
+        "brand": "Matcha Mart",
         "image": "/product-images/matcha_crinkle_cookies.jpg"
       },
       {
@@ -335,6 +361,7 @@
         "shelfLife": "2 days",
         "organic": false,
         "stock": 18,
+        "brand": "Matcha Mart",
         "image": "/product-images/matcha_basque_cheesecake.jpg"
       },
       {
@@ -348,6 +375,7 @@
         "shelfLife": "2 days",
         "organic": false,
         "stock": 18,
+        "brand": "Matcha Mart",
         "image": "/product-images/matcha_madelines.jpg"
       },
       {
@@ -361,6 +389,7 @@
         "shelfLife": "2 days",
         "organic": false,
         "stock": 18,
+        "brand": "Matcha Mart",
         "image": "/product-images/matcha_turtles.jpg"
       },
       {
@@ -374,6 +403,7 @@
         "shelfLife": "2 days",
         "organic": false,
         "stock": 18,
+        "brand": "Matcha Mart",
         "image": "/product-images/matcha_tiramisu.jpg"
       }
     ]
@@ -385,12 +415,11 @@
       "drinks": ["latte", "concentrate", "functional"],
       "bakery": ["cake", "bread"]
     },
-    "brand": ["Glico", "Lotte", "Itoen", "Morinaga"],
+    "brand": ["Glico", "Lotte", "Morinaga", "Yuki & Love", "Samkwang", "KitKat", "Koeda", "Starbucks","Cat", "Blendy", "Kataoka", "Muji", "Mitsu", "Nami", "Matcha Mart"],
     "dietary": ["organic", "vegan", "gluten-free", "vegetarian"],
-    "origin": ["Japan", "Korea", "USA"],
-    "priceRanges": ["0-5", "5-10", "10-20", "20-50", "50+"],
+    "origin": ["Japan", "Korea", "Canada"],
+    "priceRanges": ["0-5", "5-10", "10-20", "20-50"],
     "caffeine": ["none", "low", "medium", "high", "very high"],
-    "serving": ["hot", "cold", "hot/cold"],
-    "availability": ["in-stock", "pre-order"]
+    "serving": ["hot", "cold", "hot/cold"]
   }
 }
