@@ -1,0 +1,25 @@
+.checkbox-filter {
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.checkbox-filter:hover {
+  font-weight: bold;
+}
+
+.checkbox-filter label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.checkbox-filter input {
+  margin-right: 10px;
+  border-color: var(--card-foreground);
+}
+
+.filter-count {
+  margin-left: 5px;
+  color: #777;
+  font-size: 0.9em;
+}

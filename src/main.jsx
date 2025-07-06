@@ -7,11 +7,17 @@ import SurveyPage from './pages/survey-page/SurveyPage.jsx';
 import SurveyConfirmationPage from './pages/survey-confirmation-page/SurveyConfirmationPage.jsx';
 import CheckoutFormPage from './pages/checkout-form-page/CheckoutFormPage.jsx';
 import CheckoutConfirmationPage from './pages/checkout-confirmation-page/CheckoutConfirmationPage.jsx';
+import BrowsePage from './pages/browse-page/BrowsePage.jsx';
 
 createRoot(document.getElementById('root')).render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<LandingPage/>}/>
+        <Route path="/browse" element={<BrowsePage/>}/>
+        <Route path="/new-arrivals" element={<BrowsePage product="new_arrivals"/>}/>
+        <Route path="/snacks" element={<BrowsePage product="snacks"/>}/>
+        <Route path="/drinks" element={<BrowsePage product="drinks"/>}/>
+        <Route path="/bakery" element={<BrowsePage product="bakery"/>}/>
         <Route path="/survey" element={<SurveyPage/>}/>
         <Route path="/survey-confirmation" element={<SurveyConfirmationPage/>}/>
         <Route path="/checkout-form" element={<CheckoutFormPage/>} />
