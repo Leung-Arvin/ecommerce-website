@@ -8,6 +8,7 @@ import CheckoutConfirmationPage from './pages/checkout-confirmation-page/Checkou
 import BrowsePage from './pages/browse-page/BrowsePage.jsx';
 import "./index.css";
 import { CartProvider } from "./components/cart/CartContext.jsx";
+import ProductDetail from './pages/product-details/ProductDetail.jsx';
 
 createRoot(document.getElementById("root")).render(
   <CartProvider>
