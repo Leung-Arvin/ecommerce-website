@@ -39,11 +39,11 @@
 
 .dropdown-select-sort select {
   padding: 8px 12px;
+  color: #44624a;
   background-color: transparent;
   border: 1px solid var(--card-foreground);
   border-radius: 4px;
 }
-
 
 .products-grid {
   display: grid;

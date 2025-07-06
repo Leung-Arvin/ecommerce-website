@@ -28,7 +28,10 @@ label {
 body {
   margin: 0;
 }
-
+p {
+  font-size: 20px;
+  line-height: 1.4em;
+}
 h1 {
   font-size: 30px;
   font-weight: 400;

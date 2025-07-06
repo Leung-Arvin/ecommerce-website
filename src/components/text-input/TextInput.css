@@ -12,6 +12,7 @@
 }
 
 .text-input-field {
+  color: #44624a;
   background-color: transparent;
   padding: 0.75rem;
   border: 1px solid var(--card-foreground);
@@ -49,7 +50,6 @@
 }
 
 .text-input-field:disabled {
-  background-color: #f5f5f5;
   cursor: not-allowed;
 }
 

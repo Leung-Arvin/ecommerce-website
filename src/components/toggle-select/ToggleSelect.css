@@ -1,6 +1,5 @@
 .toggle-select-container {
   margin-bottom: 1.5rem;
-  font-family: Arial, sans-serif;
 }
 
 .toggle-select-header {
@@ -31,11 +30,9 @@
   flex-wrap: wrap;
 }
 
-
-.radio-input{ 
-  accent-color: var(--card-foreground)
+.radio-input {
+  accent-color: var(--card-foreground);
 }
-
 
 .button-toggle-group {
   display: flex;
@@ -68,5 +65,3 @@
 .button-toggle.active:hover {
   background-color: var(--card-foreground);
 }
-
-

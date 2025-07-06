@@ -7,7 +7,8 @@
   border-radius: 10px;
   padding: 1rem 1rem 1rem 2rem;
   height: 12vh;
-  width: 25em;
+  width: 40em;
+  max-width: 40vw;
   margin: 0 0 1em 0;
   overflow: hidden;
 }
@@ -37,7 +38,7 @@
 }
 
 .card-image {
-  width: 200px;
+  width: 50vw;
   height: auto;
   object-fit: cover;
   border-radius: 8px;

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./Navbar.css";
 import { useCart } from "../../components/cart/CartContext.jsx";
 import Button from "../button/Button.jsx";
@@ -20,8 +20,45 @@ const Navbar = () => {
     0
   );
 
+  const bannerMessages = [
+    {
+      text: "Free shipping for orders above $75",
+      link: "/browse",
+    },
+    {
+      text: "Please fill out our survey and receive 10% off your next order",
+      link: "/survey",
+    },
+  ];
+
+  const [bannerIndex, setBannerIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setBannerIndex((prevIndex) => (prevIndex + 1) % bannerMessages.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <>
+      <div className="promo-banner">
+        <Link
+          to={bannerMessages[bannerIndex].link}
+          style={{
+            textDecoration: "none",
+            color: "inherit",
+            display: "block",
+            fontWeight: "700",
+            textAlign: "center",
+            padding: "0.3rem",
+            animation: "fade-in 0.5s ease-in-out",
+          }}
+        >
+          {bannerMessages[bannerIndex].text}
+        </Link>
+      </div>
+
       <nav className="main-nav">
         <div className="top-nav">
           <Link to="/" className="logo">
@@ -29,7 +66,9 @@ const Navbar = () => {
           </Link>
 
           <div className="nav-links">
-            <a href="#">Complete our survey!</a>
+            <Link to="/drinks">
+              <h2>New! Refreshing summer matcha drinks!</h2>
+            </Link>
           </div>
 
           <div className="cart">
@@ -43,7 +82,7 @@ const Navbar = () => {
         </div>
 
         <div className="category-menu">
-        <Link to="/browse" className="category-link">
+          <Link to="/browse" className="category-link">
             <span>New Arrivals</span>
           </Link>
 
