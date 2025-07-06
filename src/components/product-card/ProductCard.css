@@ -1,5 +1,5 @@
 .product-card {
-  width: 220px;
+  width: 210px;
   padding: 1rem;
   color: white;
   text-align: center;
@@ -55,4 +55,15 @@
 .product-name-link:hover .product-name {
   color: #fcc758;
   cursor: pointer;
+}
+
+.product-link-wrapper {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.product-card:hover {
+  cursor: pointer;
+  background-color: #3b523d;
 }

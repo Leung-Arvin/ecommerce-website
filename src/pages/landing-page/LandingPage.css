@@ -1,4 +1,83 @@
-.landing-container {
-  width: 100vw;
+.main-container {
+  margin: 4vw;
 }
 
+.side-by-side-container {
+  display: flex;
+  gap: 20px;
+  height: auto;
+  align-items: stretch;
+}
+
+.container {
+  min-width: 5em;
+  width: 100vw;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5em;
+  background-color: #44624a;
+  border-radius: 10px;
+}
+
+.banner-container {
+  width: 100vw;
+  height: auto;
+  overflow: hidden;
+  margin-left: calc(-50vw + 50%);
+}
+
+.full-width-banner {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hero-banner {
+  flex: 1;
+  height: auto;
+  padding: 30px;
+  background-color: #e5e6e1;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.promo-section {
+  flex: 1;
+}
+
+.product-section {
+  margin-top: 3rem;
+}
+
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  gap: 1.8rem;
+  margin-top: 1.5rem;
+}
+
+.view-all-link {
+  font-weight: bold;
+  color: #44624a;
+  cursor: pointer;
+}
+
+.view-all-link:hover {
+  opacity: 0.75;
+}
+
+@media (max-width: 768px) {
+  .side-by-side-container {
+    flex-direction: column;
+  }
+
+  .full-width-banner {
+    height: 200px;
+    object-fit: cover;
+  }
+}
