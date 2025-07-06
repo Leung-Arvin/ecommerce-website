@@ -5,6 +5,7 @@ import CheckboxFilter from "../../components/checkbox-filter/CheckboxFilter";
 import ProductCard from "../../components/product-card/ProductCard";
 import { useState, useEffect, useMemo } from "react";
 import Button from "../../components/button/Button"
+import Navbar from "../../components/nav-bar/Navbar";
 
 export default function BrowsePage({ product }) {
   const [products, setProducts] = useState([]);
@@ -234,6 +235,8 @@ export default function BrowsePage({ product }) {
   };
 
   return (
+    <>
+    <Navbar/>
     <div className="browse-page-container">
       <div className="browse-page-filters">
       <div className="search-bar-container">
@@ -361,5 +364,6 @@ export default function BrowsePage({ product }) {
         </div>
       </div>
     </div>
+    </>
   );
 }

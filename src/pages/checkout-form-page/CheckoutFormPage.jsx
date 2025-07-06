@@ -8,9 +8,15 @@ import { useNavigate } from "react-router";
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { useCart } from "../../components/cart/CartContext";
+import Navbar from "../../components/nav-bar/Navbar";
 
 export default function CheckoutFormPage() {
   let navigate = useNavigate();
+  const {
+    cartItems,
+    clearCart
+  } = useCart();
   const [currentStep, setCurrentStep] = useState(1);
   const [discountCode, setDiscountCode] = useState("");
   const [selectedProvince, setSelectedProvince] = useState("");
@@ -100,42 +106,8 @@ export default function CheckoutFormPage() {
     },
   ];
 
-  // TODO: replace with actual cart
-  const cart = [
-    {
-      name: "Matcha Powder",
-      quantity: 1,
-      price: 5.99,
-      image: "/product-images/nami_okumidori_first_harvest.jpg",
-    },
-    {
-      name: "Green Tea Kit",
-      quantity: 2,
-      price: 5.99,
-      image: "/product-images/nami_okumidori_first_harvest.jpg",
-    },
-    {
-      name: "Tea Cup Set",
-      quantity: 1,
-      price: 12.99,
-      image: "/product-images/nami_okumidori_first_harvest.jpg",
-    },
-    {
-      name: "Tea Cup Set",
-      quantity: 1,
-      price: 12.99,
-      image: "/product-images/nami_okumidori_first_harvest.jpg",
-    },
-    {
-      name: "Tea Cup Set",
-      quantity: 1,
-      price: 12.99,
-      image: "/product-images/nami_okumidori_first_harvest.jpg",
-    },
-  ];
-
   // Calculate order totals
-  const subtotal = cart.reduce(
+  const subtotal = cartItems.reduce(
     (sum, item) => sum + item.price * item.quantity,
     0
   );
@@ -152,6 +124,8 @@ export default function CheckoutFormPage() {
   };
 
   return (
+    <>
+    <Navbar/>
     <div className="checkout-form-container" ref={containerRef}>
       <Timeline steps={steps} />
       <div className="checkout-content-container">
@@ -241,12 +215,12 @@ export default function CheckoutFormPage() {
             <TextInput label="Security Code" placeholder="" name="last-name" />
           </div>
           <TextInput label="Name on Card" placeholder="" name="apartment" />
-          <Button onClick={() => navigate("/checkout-confirmation")}>Pay Now</Button>
+          <Button onClick={() => {navigate("/checkout-confirmation"); clearCart() }}>Pay Now</Button>
         </div>
         <div className="checkout-order-details-container" ref={orderDetailsRef}>
           <div className="checkout-order-details">
             <h2>Order Details</h2>
-            <ProductList items={cart} />
+            <ProductList items={cartItems} />
             <div className="discount-container">
             <input
               className="discount-input"
@@ -276,5 +250,6 @@ export default function CheckoutFormPage() {
         </div>
       </div>
     </div>
+    </>
   );
 }

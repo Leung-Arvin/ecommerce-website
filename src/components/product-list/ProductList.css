@@ -6,6 +6,7 @@
 
 .product-quantity {
   font-size: 0.8rem;
+  margin-right: 20px;
   color: #666;
 }
 
@@ -25,8 +26,9 @@
   border-bottom: 1px solid #eee;
 }
 
-.product-name {
+.list-product-name {
   font-size: 0.95rem;
+  color: var(--card-foreground);
 }
 
 .product-price {

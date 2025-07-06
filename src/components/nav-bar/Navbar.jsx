@@ -2,9 +2,10 @@ import React from "react";
 import "./Navbar.css";
 import { useCart } from "../../components/cart/CartContext.jsx";
 import Button from "../button/Button.jsx";
-import { Route, Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 
 const Navbar = () => {
+  let navigate = useNavigate();
   const {
     cartItems,
     toggleSidebar,
@@ -42,10 +43,15 @@ const Navbar = () => {
         </div>
 
         <div className="category-menu">
-          <a href="#">New Arrivals</a>
-          <a href="#">Best Sellers</a>
+        <Link to="/browse" className="category-link">
+            <span>New Arrivals</span>
+          </Link>
 
-          <div className="dropdown">
+          <Link to="/browse" className="category-link">
+            <span>Best Sellers</span>
+          </Link>
+
+          <Link to="/snacks" className="category-link">
             <button className="dropdown-toggle">
               <img
                 src="/illustrations/sweetsLogo.svg"
@@ -55,12 +61,13 @@ const Navbar = () => {
                   marginRight: "0.5em",
                   verticalAlign: "middle",
                 }}
+                alt="Sweets"
               />
-              Sweets
+              <span>Sweets</span>
             </button>
-          </div>
+          </Link>
 
-          <div className="dropdown">
+          <Link to="/drinks" className="category-link">
             <button className="dropdown-toggle">
               <img
                 src="/illustrations/drinksLogo.svg"
@@ -70,12 +77,13 @@ const Navbar = () => {
                   marginRight: "0.5em",
                   verticalAlign: "middle",
                 }}
+                alt="Drinks"
               />
-              Drinks
+              <span>Drinks</span>
             </button>
-          </div>
+          </Link>
 
-          <div className="dropdown">
+          <Link to="/bakery" className="category-link">
             <button className="dropdown-toggle">
               <img
                 src="/illustrations/bakeryLogo.svg"
@@ -85,12 +93,14 @@ const Navbar = () => {
                   marginRight: "0.5em",
                   verticalAlign: "middle",
                 }}
+                alt="Bakery"
               />
-              Bakery
+              <span>Bakery</span>
             </button>
-          </div>
-
-          <a href="#">Browse All</a>
+          </Link>
+          <Link to="/browse" className="category-link">
+            <span>Browse All</span>
+          </Link>
         </div>
       </nav>
 
@@ -147,7 +157,11 @@ const Navbar = () => {
             <div className="cart-summary">
               <p className="total-price">Total: ${totalPrice.toFixed(2)}</p>
             </div>
-            <Button color="green" className="fixed-bottom">
+            <Button
+              onClick={() => navigate("/checkout-form")}
+              color="green"
+              className="fixed-bottom"
+            >
               Check Out Now
             </Button>
           </>
