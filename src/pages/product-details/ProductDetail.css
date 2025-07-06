@@ -3,7 +3,7 @@
   color: white;
   gap: 2rem;
   box-sizing: border-box;
-  min-height: 100vh;
+  height: 85vh;
   display: flex;
   flex-direction: column;
 }
@@ -12,7 +12,6 @@
   width: 70vw;
   gap: 10rem;
   margin-top: 5em;
-
   margin-left: auto;
   margin-right: auto;
 }
@@ -24,9 +23,9 @@
 .detail-wrapper {
   display: flex;
   background: #527659;
+  height: 60vh;
   padding: 2rem 7rem;
   border-radius: 8px;
-  height: auto;
   gap: 5em;
 }
 

@@ -28,42 +28,48 @@ export default function ProductDetail() {
   }
 
   return (
-    <div className="product-detail">
+    <>
       <Navbar />
-      <div className="details-container">
-        <div className="detail-wrapper">
-          <img
-            src={product.image}
-            alt={product.name}
-            style={{
-              width: "20vw",
-              height: "auto",
-              objectFit: "contain",
-            }}
-          />
+      <div className="product-detail">
+        <div className="details-container">
+          <div className="detail-wrapper">
+            <img
+              src={product.image}
+              alt={product.name}
+              style={{
+                width: "20vw",
+                height: "auto",
+                objectFit: "contain",
+              }}
+            />
 
-          <div className="detail-info">
-            <p>
-              <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
-                Home
-              </Link>{" "}
-              / {getCategoryFromId(id)}
-            </p>
+            <div className="detail-info">
+              <p>
+                <Link
+                  to="/"
+                  style={{ textDecoration: "none", color: "inherit" }}
+                >
+                  Home
+                </Link>{" "}
+                / {getCategoryFromId(id)}
+              </p>
 
-            <h1>{product.name}</h1>
-            <p className="detail-price">${product.price.toFixed(2)}</p>
-            <p className="in-stock">
-              <span className="in-stock-circle"></span> In stock, ready to ship
-            </p>
+              <h1>{product.name}</h1>
+              <p className="detail-price">${product.price.toFixed(2)}</p>
+              <p className="in-stock">
+                <span className="in-stock-circle"></span> In stock, ready to
+                ship
+              </p>
 
-            <Button color="white" onClick={() => addToCart(product)}>
-              Add to cart
-            </Button>
+              <Button color="white" onClick={() => addToCart(product)}>
+                Add to cart
+              </Button>
 
-            <p>{product.description}</p>
+              <p>{product.description}</p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }

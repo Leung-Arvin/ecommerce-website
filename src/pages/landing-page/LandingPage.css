@@ -11,7 +11,7 @@
 
 .container {
   min-width: 5em;
-  width: 100vw;
+  width: 60vw;
   height: 50vh;
   display: flex;
   justify-content: center;
@@ -22,7 +22,7 @@
 }
 
 .banner-container {
-  width: 100vw;
+  width: 80vw;
   height: auto;
   overflow: hidden;
   margin-left: calc(-50vw + 50%);
@@ -59,14 +59,14 @@
 .product-scroll-container {
   width: 100%;
   overflow-x: auto;
-  padding-bottom: 1rem; /* Space for scrollbar */
+  padding-bottom: 1rem;
 }
 
 .product-scroll {
   display: flex;
-  gap: 1rem; 
-  width: max-content; 
-  padding: 0.5rem 0; 
+  gap: 1rem;
+  width: max-content;
+  padding: 0.5rem 0;
 }
 
 .product-scroll-container::-webkit-scrollbar {
@@ -86,7 +86,6 @@
 .product-scroll-container::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
-
 
 .view-all-link {
   font-weight: bold;
