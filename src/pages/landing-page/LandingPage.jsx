@@ -87,8 +87,11 @@ export default function LandingPage() {
                 src="https://www.tofucute.com/images/blog/matcha600.png"
                 alt=""
                 style={{
-                  display: "flex",
                   width: "40%",
+                  minWidth: "20em",
+                  height: "auto",
+                  maxHeight: "100%",
+                  objectFit: "cover",
                   borderRadius: "10px",
                 }}
               />
